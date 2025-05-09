@@ -8,7 +8,7 @@ export default function LoginPage() {
 
    function handleFormSubmit(ev) {
     ev.preventDefault();
-    const response = fetch('/api/login', {
+    const response = fetch('/api/register', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -21,7 +21,7 @@ export default function LoginPage() {
       <div className="bg-white p-5 rounded-xl shadow-lg w-full max-w-sm">
         <h1 className="text-center text-red-500 text-3xl font-bold mb-6">Login</h1>
 
-        <form action="" className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
+        <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
           <input
             type="email"
             placeholder="Email"
